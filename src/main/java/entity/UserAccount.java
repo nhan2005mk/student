@@ -57,4 +57,13 @@ public class UserAccount {
     public void setRole(Integer role) {
         this.role = role;
     }
+    public String getRoleLabel() {
+        if (role == null) return "Unknown";
+             switch (role) {
+            case 1: return "Manager";
+            case 2: return "Staff";
+            case 3: return "Guest";
+            default: return "Unknown";
+        }
+    }
 }
